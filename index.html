@@ -38,6 +38,9 @@
     padding: 9px;
     box-sizing: border-box;
     box-shadow: 0 5px 14px rgba(80, 60, 50, 0.16);
+
+    /* soft old-photo look */
+    filter: sepia(12%) saturate(82%) contrast(94%) brightness(103%);
 }
 
 .main-photo {
@@ -103,6 +106,17 @@
 .decorations span {
     position: absolute;
     color: #d6b35a;
+    pointer-events: none;
+}
+
+.decorations .blur-star {
+    filter: blur(2px);
+    opacity: 0.55;
+}
+
+.decorations .soft-star {
+    filter: blur(0.7px);
+    opacity: 0.7;
 }
 
 .star1 {
@@ -134,6 +148,71 @@
     left: 18%;
     font-size: 16px;
 }
+        .star6 {
+    top: 8%;
+    left: 42%;
+    font-size: 13px;
+}
+
+.star7 {
+    top: 31%;
+    left: 3%;
+    font-size: 14px;
+}
+
+.star8 {
+    top: 35%;
+    right: 5%;
+    font-size: 11px;
+}
+
+.star9 {
+    top: 57%;
+    left: 14%;
+    font-size: 17px;
+}
+
+.star10 {
+    top: 65%;
+    right: 6%;
+    font-size: 14px;
+}
+
+.star11 {
+    top: 16%;
+    left: 29%;
+    font-size: 19px;
+}
+
+.star12 {
+    top: 47%;
+    right: 18%;
+    font-size: 25px;
+}
+
+.star13 {
+    bottom: 29%;
+    left: 5%;
+    font-size: 18px;
+}
+
+.star14 {
+    bottom: 7%;
+    right: 25%;
+    font-size: 21px;
+}
+
+.star15 {
+    top: 74%;
+    left: 24%;
+    font-size: 12px;
+}
+
+.star16 {
+    bottom: 18%;
+    right: 4%;
+    font-size: 15px;
+}
 h1 {
     font-family: "Parisienne", cursive;
     font-size: 64px;
@@ -151,29 +230,45 @@ body {
 <body>
    <h1>for Nikki ♡</h1> 
     <div class="decorations">
+
     <span class="star star1">✦</span>
     <span class="star star2">✧</span>
     <span class="star star3">⋆</span>
     <span class="star star4">✦</span>
     <span class="star star5">✧</span>
+
+    <span class="star star6">⋆</span>
+    <span class="star star7">✦</span>
+    <span class="star star8">✧</span>
+    <span class="star star9">⋆</span>
+    <span class="star star10">✦</span>
+
+    <span class="star blur-star star11">✦</span>
+    <span class="star blur-star star12">⋆</span>
+    <span class="star blur-star star13">✧</span>
+    <span class="star blur-star star14">✦</span>
+
+    <span class="star soft-star star15">⋆</span>
+    <span class="star soft-star star16">✧</span>
+
 </div>
 
     
-    <div class="photo-collage">
+  <div class="photo-collage">
 
-    <img src="photo1.jpeg" class="photo photo1" alt="Nikki">
+    <img src="nikki-closeup.jpeg" class="photo photo1" alt="Nikki">
 
-    <img src="photo2.jpeg" class="photo photo2" alt="Nikki">
+    <img src="nikki-smile.jpeg" class="photo photo2" alt="Nikki">
 
     <img src="IMG_9714.jpeg" class="photo main-photo" alt="Nikki">
 
-    <img src="photo3.jpeg" class="photo photo3" alt="Nikki">
+    <img src="nikki-green-shirt.jpeg" class="photo photo3" alt="Nikki">
 
-    <img src="photo4.jpeg" class="photo photo4" alt="Nikki">
+    <img src="nikki-sleeping.jpeg" class="photo photo4" alt="Nikki">
 
-    <img src="photo5.jpeg" class="photo photo5" alt="Nikki">
+    <img src="nikki-side-profile.jpeg" class="photo photo5" alt="Nikki">
 
-</div>
+</div>  
 
     <p>A little place for every version of you.</p>
 

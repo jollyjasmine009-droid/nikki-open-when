@@ -24,6 +24,75 @@
         img {
     margin: 15px 0;
 }
+        .photo-collage {
+    position: relative;
+    width: 340px;
+    height: 480px;
+    margin: 20px auto 10px;
+}
+
+.photo {
+    position: absolute;
+    object-fit: cover;
+    background: white;
+    padding: 9px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 14px rgba(80, 60, 50, 0.16);
+}
+
+.main-photo {
+    width: 275px;
+    height: 350px;
+    left: 32px;
+    top: 65px;
+    transform: rotate(-2deg);
+    z-index: 3;
+}
+
+.photo1 {
+    width: 125px;
+    height: 155px;
+    left: 0;
+    top: 20px;
+    transform: rotate(-7deg);
+    z-index: 2;
+}
+
+.photo2 {
+    width: 130px;
+    height: 155px;
+    right: 0;
+    top: 5px;
+    transform: rotate(6deg);
+    z-index: 2;
+}
+
+.photo3 {
+    width: 120px;
+    height: 145px;
+    left: 5px;
+    bottom: 25px;
+    transform: rotate(5deg);
+    z-index: 4;
+}
+
+.photo4 {
+    width: 135px;
+    height: 160px;
+    right: 0;
+    bottom: 10px;
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+.photo5 {
+    width: 110px;
+    height: 135px;
+    right: 35px;
+    top: 175px;
+    transform: rotate(8deg);
+    z-index: 4;
+}
     .decorations {
     position: fixed;
     inset: 0;
@@ -90,7 +159,21 @@ body {
 </div>
 
     
-    <img src="IMG_9714.jpeg" alt="Nikki" style="width: 280px; border: 10px solid white; transform: rotate(-2deg);">
+    <div class="photo-collage">
+
+    <img src="photo1.jpeg" class="photo photo1" alt="Nikki">
+
+    <img src="photo2.jpeg" class="photo photo2" alt="Nikki">
+
+    <img src="IMG_9714.jpeg" class="photo main-photo" alt="Nikki">
+
+    <img src="photo3.jpeg" class="photo photo3" alt="Nikki">
+
+    <img src="photo4.jpeg" class="photo photo4" alt="Nikki">
+
+    <img src="photo5.jpeg" class="photo photo5" alt="Nikki">
+
+</div>
 
     <p>A little place for every version of you.</p>
 

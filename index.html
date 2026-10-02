@@ -462,18 +462,39 @@ h1 {
 }
 
 
-/* =========================
+
+   /* =========================
    PHOTO BLOOM
 ========================= */
+
+/* Starting position:
+   all photos begin tiny and gathered together */
+
+.photo {
+    opacity: 0;
+
+    transform:
+        translate(0, 0)
+        scale(0.15)
+        rotate(0deg);
+
+    transition:
+        transform 1s cubic-bezier(.2,.8,.2,1),
+        opacity 0.55s ease;
+}
+
+
+/* When the box opens:
+   photos bloom outward into their final positions */
 
 .page-content.open .photo {
     opacity: 1;
 
     transform:
         translate(0, 0)
-        rotate(var(--rotation))
-        scale(1);
-}
+        scale(1)
+        rotate(0deg);
+} 
 
 
 /* =========================
@@ -639,49 +660,57 @@ h1 {
 
     <div class="photo-collage">
 
-        <img src="36EBDDDE-E66D-4824-B125-8DF4A4C96DF0.jpeg"
-             class="photo photo1"
-             alt="Nikki">
+    <!-- TOP LEFT -->
+    <img src="36EBDDDE-E66D-4824-B125-8DF4A4C96DF0.jpeg"
+         class="photo photo1"
+         alt="Nikki">
 
-        <img src="52B82AAE-72A0-4ADC-9D87-3EBC9D344F10.jpeg"
-             class="photo photo2"
-             alt="Nikki">
+    <!-- TOP RIGHT -->
+    <img src="52B82AAE-72A0-4ADC-9D87-3EBC9D344F10.jpeg"
+         class="photo photo2"
+         alt="Nikki">
 
-        <img src="IMG_9714.jpeg"
-             class="photo main-photo"
-             alt="Nikki">
+    <!-- LEFT MIDDLE -->
+    <img src="IMG_9917.jpeg"
+         class="photo photo3"
+         alt="Nikki">
 
-        <img src="753B99A9-06E2-42A3-BC98-8C08C92C7657.jpeg"
-             class="photo photo3"
-             alt="Nikki">
+    <!-- UPPER CENTER -->
+    <img src="IMG_9920.jpeg"
+         class="photo photo9"
+         alt="Nikki">
 
-        <img src="B8AC4CC4-754C-4490-B4F9-CC609C13EC6D.jpeg"
-             class="photo photo4"
-             alt="Nikki">
+    <!-- BIG CENTER -->
+    <img src="IMG_9714.jpeg"
+         class="photo main-photo"
+         alt="Nikki">
 
-        <img src="IMG_9892.jpeg"
-             class="photo photo5"
-             alt="Nikki">
+    <!-- RIGHT MIDDLE -->
+    <img src="B8AC4CC4-754C-4490-B4F9-CC609C13EC6D.jpeg"
+         class="photo photo4"
+         alt="Nikki">
 
-        <img src="IMG_9917.jpeg"
-             class="photo photo7"
-             alt="Nikki">
+    <!-- LOWER LEFT -->
+    <img src="IMG_9892.jpeg"
+         class="photo photo5"
+         alt="Nikki">
 
-        <img src="IMG_9919.jpeg"
-             class="photo photo8"
-             alt="Nikki">
+    <!-- LOWER LEFT / BOTTOM -->
+    <img src="753B99A9-06E2-42A3-BC98-8C08C92C7657.jpeg"
+         class="photo photo7"
+         alt="Nikki">
 
-        <img src="IMG_9920.jpeg"
-             class="photo photo9"
-             alt="Nikki">
+    <!-- BOTTOM RIGHT -->
+    <img src="IMG_9919.jpeg"
+         class="photo photo8"
+         alt="Nikki">
 
-        <img src="IMG_9921.jpeg"
-             class="photo photo10"
-             alt="Nikki">
+    <!-- BOTTOM CENTER -->
+    <img src="IMG_9921.jpeg"
+         class="photo photo10"
+         alt="Nikki">
 
-    </div>
-
-
+</div>
     <p class="subtitle">
         A little place for every version of you.
     </p>

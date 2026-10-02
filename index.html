@@ -398,16 +398,6 @@ h1 {
     transform: rotate(0deg);
 }
 
-
-/* =========================
-   NO EXTRA ROTATION
-========================= */
-
-.page-content.open .photo {
-    opacity: 1;
-
-    transform: rotate(0deg) scale(1);
-}
 /* =========================
    OPENING ANIMATION
 ========================= */
@@ -463,24 +453,78 @@ h1 {
 
 
 
-   /* =========================
+/* =========================
    PHOTO BLOOM
 ========================= */
 
-/* Starting position:
-   all photos begin tiny and gathered together */
+/* Starting positions:
+   every photo begins gathered around the box */
 
 .photo {
     opacity: 0;
 
-    transform:
-        translate(0, 0)
-        scale(0.15)
-        rotate(0deg);
-
     transition:
         transform 1s cubic-bezier(.2,.8,.2,1),
         opacity 0.55s ease;
+}
+
+
+/* =========================
+   BLOOM STARTING POSITIONS
+========================= */
+
+.photo1 {
+    transform: translate(90px, 270px) scale(0.15) rotate(0deg);
+}
+
+.photo2 {
+    transform: translate(-90px, 270px) scale(0.15) rotate(0deg);
+}
+
+.photo3 {
+    transform: translate(100px, 180px) scale(0.15) rotate(0deg);
+}
+
+.photo4 {
+    transform: translate(-100px, 100px) scale(0.15) rotate(0deg);
+}
+
+.photo5 {
+    transform: translate(100px, -80px) scale(0.15) rotate(0deg);
+}
+
+.photo7 {
+    transform: translate(90px, -170px) scale(0.15) rotate(0deg);
+}
+
+.photo8 {
+    transform: translate(-90px, -170px) scale(0.15) rotate(0deg);
+}
+
+.photo9 {
+    transform: translate(0, 180px) scale(0.15) rotate(0deg);
+}
+
+.photo10 {
+    transform: translate(-10px, -180px) scale(0.15) rotate(0deg);
+}
+
+.main-photo {
+    transform: translate(0, 0) scale(0.15) rotate(0deg);
+}
+
+
+/* =========================
+   FINAL BLOOM POSITIONS
+========================= */
+
+.page-content.open .photo {
+    opacity: 1;
+
+    transform:
+        translate(0, 0)
+        scale(1)
+        rotate(0deg);
 }
 
 

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Nikki ♡</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 
-    <style>
+<style>
 
 body {
     background: #f7f0df;
@@ -32,9 +32,10 @@ h1 {
     margin: 0 0 20px;
 }
 
-/* -------------------------
+
+/* =========================
    GOLD STARS
-------------------------- */
+========================= */
 
 .decorations {
     position: fixed;
@@ -65,21 +66,25 @@ h1 {
 .star3 { top: 42%; left: 8%; font-size: 20px; }
 .star4 { bottom: 22%; right: 10%; font-size: 26px; }
 .star5 { bottom: 12%; left: 18%; font-size: 16px; }
+
 .star6 { top: 8%; left: 42%; font-size: 13px; }
 .star7 { top: 31%; left: 3%; font-size: 14px; }
 .star8 { top: 35%; right: 5%; font-size: 11px; }
 .star9 { top: 57%; left: 14%; font-size: 17px; }
 .star10 { top: 65%; right: 6%; font-size: 14px; }
+
 .star11 { top: 16%; left: 29%; font-size: 19px; }
 .star12 { top: 47%; right: 18%; font-size: 25px; }
 .star13 { bottom: 29%; left: 5%; font-size: 18px; }
 .star14 { bottom: 7%; right: 25%; font-size: 21px; }
+
 .star15 { top: 74%; left: 24%; font-size: 12px; }
 .star16 { bottom: 18%; right: 4%; font-size: 15px; }
 
-/* -------------------------
-   EVERYTHING ON THE PAGE
-------------------------- */
+
+/* =========================
+   PAGE CONTENT
+========================= */
 
 .page-content {
     position: relative;
@@ -90,9 +95,10 @@ h1 {
     align-items: center;
 }
 
-/* -------------------------
-   THE LITTLE BLUE BOX
-------------------------- */
+
+/* =========================
+   LITTLE BLUE BOX
+========================= */
 
 .memory-box {
     position: relative;
@@ -107,8 +113,6 @@ h1 {
     transform: translateY(-4px) rotate(-1deg);
 }
 
-/* bottom of the box */
-
 .box-base {
     position: absolute;
     bottom: 0;
@@ -122,8 +126,6 @@ h1 {
     box-shadow: 0 10px 20px rgba(80, 60, 50, 0.16);
 }
 
-/* little handmade lines */
-
 .box-base::before {
     content: "";
     position: absolute;
@@ -131,8 +133,6 @@ h1 {
     border: 1px dashed rgba(91, 74, 66, 0.35);
     border-radius: 5px;
 }
-
-/* lid */
 
 .box-lid {
     position: absolute;
@@ -145,10 +145,13 @@ h1 {
     border-radius: 8px;
     box-sizing: border-box;
     transform-origin: left center;
+
     transition:
         transform 0.8s cubic-bezier(.2,.8,.2,1),
         top 0.8s ease;
+
     z-index: 5;
+
     box-shadow: 0 5px 10px rgba(80, 60, 50, 0.12);
 }
 
@@ -159,21 +162,23 @@ h1 {
     text-align: center;
     top: 8px;
     left: 0;
+
     font-family: "Parisienne", cursive;
     font-size: 22px;
     color: #5b4a42;
 }
-
-/* little ribbon */
 
 .ribbon {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+
     width: 28px;
     height: 150px;
+
     background: rgba(214, 179, 90, 0.45);
+
     z-index: 6;
     pointer-events: none;
 }
@@ -183,39 +188,46 @@ h1 {
     position: absolute;
     top: 8px;
     left: -8px;
+
     width: 44px;
     height: 30px;
+
     border: 2px solid #d6b35a;
     border-radius: 50%;
 }
 
-/* text on box */
-
 .box-text {
     position: absolute;
     z-index: 7;
+
     width: 100%;
     top: 73px;
     left: 0;
+
     font-family: "Parisienne", cursive;
     font-size: 27px;
     color: #5b4a42;
+
     pointer-events: none;
 }
 
-/* -------------------------
-   COLLAGE
-------------------------- */
+
+/* =========================
+   PHOTO COLLAGE
+========================= */
 
 .photo-collage {
     position: relative;
+
     width: 360px;
     height: 530px;
-    margin: 10px auto 10px;
 
-    /* hidden until box opens */
+    margin: 10px auto;
+
     opacity: 0;
+
     transform: scale(0.7);
+
     pointer-events: none;
 
     transition:
@@ -223,17 +235,28 @@ h1 {
         transform 0.8s cubic-bezier(.2,.8,.2,1);
 }
 
-/* every photo starts at the middle */
+
+/* Every photo begins tiny */
 
 .photo {
     position: absolute;
-    object-fit: cover;
-    background: white;
-    padding: 9px;
-    box-sizing: border-box;
-    box-shadow: 0 5px 14px rgba(80, 60, 50, 0.16);
 
-    filter: sepia(12%) saturate(82%) contrast(94%) brightness(103%);
+    object-fit: cover;
+
+    background: white;
+
+    padding: 9px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 5px 14px rgba(80, 60, 50, 0.16);
+
+    filter:
+        sepia(12%)
+        saturate(82%)
+        contrast(94%)
+        brightness(103%);
 
     transform:
         translate(0, 0)
@@ -241,119 +264,146 @@ h1 {
         scale(0.35);
 
     opacity: 0;
+
     transition:
         transform 1s cubic-bezier(.2,.8,.2,1),
         opacity 0.5s ease;
 }
 
-/* -------------------------
+
+/* =========================
    FINAL PHOTO POSITIONS
-------------------------- */
+========================= */
 
 .main-photo {
     width: 205px;
     height: 270px;
+
     left: 78px;
     top: 130px;
+
     z-index: 5;
 }
 
 .photo1 {
     width: 130px;
     height: 160px;
+
     left: 0;
     top: 10px;
+
     z-index: 6;
 }
 
 .photo2 {
     width: 130px;
     height: 160px;
+
     right: 0;
     top: 5px;
+
     z-index: 6;
 }
 
 .photo3 {
     width: 130px;
     height: 160px;
+
     left: 0;
     bottom: 10px;
+
     z-index: 6;
 }
 
 .photo4 {
     width: 130px;
     height: 160px;
+
     right: 0;
     bottom: 5px;
+
     z-index: 6;
 }
 
 .photo5 {
     width: 130px;
     height: 160px;
+
     left: 5px;
     top: 180px;
+
     z-index: 7;
 }
 
 .photo6 {
     width: 130px;
     height: 160px;
+
     right: 5px;
     top: 180px;
+
     z-index: 7;
 }
-
-/* four new photos */
 
 .photo7 {
     width: 125px;
     height: 155px;
+
     left: 15px;
     top: 75px;
+
     z-index: 8;
 }
 
 .photo8 {
     width: 125px;
     height: 155px;
+
     right: 15px;
     top: 75px;
+
     z-index: 8;
 }
 
 .photo9 {
     width: 125px;
     height: 155px;
+
     left: 15px;
     bottom: 75px;
+
     z-index: 8;
 }
 
 .photo10 {
     width: 125px;
     height: 155px;
+
     right: 15px;
     bottom: 75px;
+
     z-index: 8;
 }
 
-/* -------------------------
+
+/* =========================
    OPEN ANIMATION
-------------------------- */
+========================= */
 
 .page-content.open .box-lid {
-    transform: rotate(-18deg) translate(-15px, -45px);
+    transform:
+        rotate(-18deg)
+        translate(-15px, -45px);
 }
 
 .page-content.open .memory-box {
     animation: boxDisappear 0.8s ease forwards;
+
     pointer-events: none;
 }
 
 @keyframes boxDisappear {
+
     0% {
         opacity: 1;
         transform: scale(1);
@@ -373,18 +423,26 @@ h1 {
 
 .page-content.open .photo-collage {
     opacity: 1;
+
     transform: scale(1);
+
     pointer-events: auto;
 }
 
-/* photos bloom outward */
+
+/* Photos bloom outward */
 
 .page-content.open .photo {
     opacity: 1;
-    transform: translate(0, 0) rotate(var(--rotation)) scale(1);
+
+    transform:
+        translate(0, 0)
+        rotate(var(--rotation))
+        scale(1);
 }
 
-/* individual rotations */
+
+/* Rotations */
 
 .photo1 { --rotation: -8deg; }
 .photo2 { --rotation: 7deg; }
@@ -397,7 +455,8 @@ h1 {
 .photo9 { --rotation: -7deg; }
 .photo10 { --rotation: 6deg; }
 
-/* staggered timing */
+
+/* Stagger */
 
 .photo1 { transition-delay: 0.15s; }
 .photo2 { transition-delay: 0.22s; }
@@ -410,9 +469,10 @@ h1 {
 .photo9 { transition-delay: 0.71s; }
 .photo10 { transition-delay: 0.78s; }
 
-/* -------------------------
+
+/* =========================
    TEXT + BUTTON
-------------------------- */
+========================= */
 
 .subtitle {
     font-size: 20px;
@@ -422,24 +482,36 @@ h1 {
 
 .story-button {
     background: #d6b35a;
+
     color: #fffaf0;
+
     border: none;
+
     padding: 12px 24px;
+
     border-radius: 30px;
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 18px;
+
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(80, 60, 50, 0.15);
-    transition: transform 0.2s ease;
+
+    box-shadow:
+        0 4px 10px rgba(80, 60, 50, 0.15);
+
+    transition:
+        transform 0.2s ease;
 }
 
 .story-button:hover {
     transform: translateY(-2px);
 }
 
-/* -------------------------
+
+/* =========================
    MOBILE
-------------------------- */
+========================= */
 
 @media (max-width: 500px) {
 
@@ -460,221 +532,12 @@ h1 {
 }
 
 </style>
-        .photo-collage {
-    position: relative;
-    width: 360px;
-    height: 530px;
-    margin: 20px auto 10px;
-}
-
-.photo {
-    position: absolute;
-    object-fit: cover;
-    background: white;
-    padding: 9px;
-    box-sizing: border-box;
-    box-shadow: 0 5px 14px rgba(80, 60, 50, 0.16);
-
-    /* soft old-photo look */
-    filter: sepia(12%) saturate(82%) contrast(94%) brightness(103%);
-}
-
-.main-photo {
-    width: 235px;
-    height: 300px;
-    left: 62px;
-    top: 105px;
-    transform: rotate(-2deg);
-    z-index: 3;
-}
-
-.photo1 {
-    width: 145px;
-    height: 175px;
-    left: -5px;
-    top: 5px;
-    transform: rotate(-7deg);
-    z-index: 4;
-}
-
-.photo2 {
-    width: 145px;
-    height: 175px;
-    right: -5px;
-    top: 0;
-    transform: rotate(6deg);
-    z-index: 4;
-}
-
-.photo3 {
-    width: 145px;
-    height: 170px;
-    left: -5px;
-    bottom: 5px;
-    transform: rotate(5deg);
-    z-index: 4;
-}
-
-.photo4 {
-    width: 145px;
-    height: 175px;
-    right: -5px;
-    bottom: 0;
-    transform: rotate(-6deg);
-    z-index: 4;
-}
-
-.photo5 {
-    width: 145px;
-    height: 175px;
-    left: -5px;
-    top: 175px;
-    transform: rotate(-8deg);
-    z-index: 4;
-}
-
-        .photo6 {
-    width: 145px;
-    height: 175px;
-    right: -5px;
-    top: 180px;
-    transform: rotate(7deg);
-    z-index: 4;
-}
-    .decorations {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.decorations span {
-    position: absolute;
-    color: #d6b35a;
-    pointer-events: none;
-}
-
-.decorations .blur-star {
-    filter: blur(2px);
-    opacity: 0.55;
-}
-
-.decorations .soft-star {
-    filter: blur(0.7px);
-    opacity: 0.7;
-}
-
-.star1 {
-    top: 12%;
-    left: 15%;
-    font-size: 24px;
-}
-
-.star2 {
-    top: 20%;
-    right: 14%;
-    font-size: 18px;
-}
-
-.star3 {
-    top: 42%;
-    left: 8%;
-    font-size: 20px;
-}
-
-.star4 {
-    bottom: 22%;
-    right: 10%;
-    font-size: 26px;
-}
-
-.star5 {
-    bottom: 12%;
-    left: 18%;
-    font-size: 16px;
-}
-        .star6 {
-    top: 8%;
-    left: 42%;
-    font-size: 13px;
-}
-
-.star7 {
-    top: 31%;
-    left: 3%;
-    font-size: 14px;
-}
-
-.star8 {
-    top: 35%;
-    right: 5%;
-    font-size: 11px;
-}
-
-.star9 {
-    top: 57%;
-    left: 14%;
-    font-size: 17px;
-}
-
-.star10 {
-    top: 65%;
-    right: 6%;
-    font-size: 14px;
-}
-
-.star11 {
-    top: 16%;
-    left: 29%;
-    font-size: 19px;
-}
-
-.star12 {
-    top: 47%;
-    right: 18%;
-    font-size: 25px;
-}
-
-.star13 {
-    bottom: 29%;
-    left: 5%;
-    font-size: 18px;
-}
-
-.star14 {
-    bottom: 7%;
-    right: 25%;
-    font-size: 21px;
-}
-
-.star15 {
-    top: 74%;
-    left: 24%;
-    font-size: 12px;
-}
-
-.star16 {
-    bottom: 18%;
-    right: 4%;
-    font-size: 15px;
-}
-h1 {
-    font-family: "Parisienne", cursive;
-    font-size: 64px;
-    font-weight: 400;
-    color: #5b4a42;
-    margin-bottom: 10px;
-}
-
-body {
-    font-family: "Cormorant Garamond", serif;
-}
-</style>
 </head>
 
+
 <body>
-   <h1>for Nikki ♡</h1> 
-    <div class="decorations">
+
+<div class="decorations">
 
     <span class="star star1">✦</span>
     <span class="star star2">✧</span>
@@ -698,28 +561,96 @@ body {
 
 </div>
 
-    
-  <div class="photo-collage">
 
-    <img src="36EBDDDE-E66D-4824-B125-8DF4A4C96DF0.jpeg" class="photo photo1" alt="Nikki">
+<div class="page-content">
 
-    <img src="52B82AAE-72A0-4ADC-9D87-3EBC9D344F10.jpeg" class="photo photo2" alt="Nikki">
+    <h1>for Nikki ♡</h1>
 
-    <img src="IMG_9714.jpeg" class="photo main-photo" alt="Nikki">
 
-    <img src="753B99A9-06E2-42A3-BC98-8C08C92C7657.jpeg" class="photo photo3" alt="Nikki">
+    <div class="memory-box" id="memoryBox">
 
-    <img src="B8AC4CC4-754C-4490-B4F9-CC609C13EC6D.jpeg" class="photo photo4" alt="Nikki">
+        <div class="box-base"></div>
 
-    <img src="IMG_9892.jpeg" class="photo photo5" alt="Nikki">
+        <div class="ribbon"></div>
 
-<img src="YOUR-NEW-PHOTO.jpeg" class="photo photo6" alt="Nikki">
+        <div class="box-lid"></div>
+
+        <div class="box-text">
+            open me ♡
+        </div>
+
+    </div>
+
+
+    <div class="photo-collage">
+
+        <img src="36EBDDDE-E66D-4824-B125-8DF4A4C96DF0.jpeg"
+             class="photo photo1"
+             alt="Nikki">
+
+        <img src="52B82AAE-72A0-4ADC-9D87-3EBC9D344F10.jpeg"
+             class="photo photo2"
+             alt="Nikki">
+
+        <img src="IMG_9714.jpeg"
+             class="photo main-photo"
+             alt="Nikki">
+
+        <img src="753B99A9-06E2-42A3-BC98-8C08C92C7657.jpeg"
+             class="photo photo3"
+             alt="Nikki">
+
+        <img src="B8AC4CC4-754C-4490-B4F9-CC609C13EC6D.jpeg"
+             class="photo photo4"
+             alt="Nikki">
+
+        <img src="IMG_9892.jpeg"
+             class="photo photo5"
+             alt="Nikki">
+
+        <img src="IMG_9917.jpeg"
+             class="photo photo7"
+             alt="Nikki">
+
+        <img src="IMG_9919.jpeg"
+             class="photo photo8"
+             alt="Nikki">
+
+        <img src="IMG_9920.jpeg"
+             class="photo photo9"
+             alt="Nikki">
+
+        <img src="IMG_9921.jpeg"
+             class="photo photo10"
+             alt="Nikki">
+
+    </div>
+
+
+    <p class="subtitle">
+        A little place for every version of you.
+    </p>
+
+
+    <button class="story-button">
+        begin our story ♡
+    </button>
 
 </div>
 
-    <p>A little place for every version of you.</p>
 
-    <button>begin our story ♡</button>
+<script>
+
+const memoryBox = document.getElementById("memoryBox");
+const pageContent = document.querySelector(".page-content");
+
+memoryBox.addEventListener("click", function() {
+
+    pageContent.classList.add("open");
+
+});
+
+</script>
 
 </body>
 </html>

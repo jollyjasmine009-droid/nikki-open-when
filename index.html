@@ -275,174 +275,138 @@ h1 {
         opacity 0.55s ease;
 }
 
-
 /* =========================
    COLLAGE POSITIONS
 ========================= */
 
-
-/* TOP LEFT */
-
+/* TOP LEFT - smiling/tank top */
 .photo1 {
-    width: 180px;
+    width: 175px;
     height: 145px;
-
-    left: -4px;
+    left: 0;
     top: 0;
-
     z-index: 3;
 
-    --rotation: 0deg;
+    transform: rotate(0deg);
 }
 
 
-/* TOP RIGHT */
-
+/* TOP RIGHT - Grinch shirt */
 .photo2 {
-    width: 178px;
-    height: 235px;
-
-    right: -4px;
-    top: -5px;
-
+    width: 185px;
+    height: 225px;
+    right: 0;
+    top: 0;
     z-index: 2;
 
-    --rotation: 0deg;
+    transform: rotate(0deg);
 }
 
 
-/* MAIN CENTER PHOTO */
-
-.main-photo {
-    width: 190px;
-    height: 265px;
-
-    left: 88px;
-    top: 190px;
-
-    z-index: 7;
-
-    --rotation: 0deg;
-}
-
-
-/* LEFT-MIDDLE */
-
+/* LEFT MIDDLE - blue top + cat */
 .photo3 {
-    width: 160px;
-    height: 215px;
-
-    left: -8px;
-    top: 125px;
-
-    z-index: 4;
-
-    --rotation: 0deg;
-}
-
-
-/* RIGHT-MIDDLE */
-
-.photo4 {
-    width: 155px;
+    width: 150px;
     height: 225px;
-
-    right: -6px;
-    top: 225px;
-
-    z-index: 5;
-
-    --rotation: 0deg;
-}
-
-
-/* LITTLE CENTER-LEFT PHOTO */
-
-.photo5 {
-    width: 145px;
-    height: 175px;
-
-    left: 5px;
-    top: 340px;
-
-    z-index: 8;
-
-    --rotation: 0deg;
-}
-
-
-/* CENTER-RIGHT PHOTO */
-
-.photo6 {
-    width: 135px;
-    height: 165px;
-
-    right: 4px;
-    top: 145px;
-
-    z-index: 6;
-
-    --rotation: 0deg;
-}
-
-
-/* LOWER LEFT */
-
-.photo7 {
-    width: 175px;
-    height: 205px;
-
-    left: -5px;
-    bottom: -5px;
-
-    z-index: 3;
-
-    --rotation: 0deg;
-}
-
-
-/* LOWER RIGHT */
-
-.photo8 {
-    width: 180px;
-    height: 195px;
-
-    right: -5px;
-    bottom: 0;
-
+    left: 0;
+    top: 125px;
     z-index: 4;
 
-    --rotation: 0deg;
+    transform: rotate(0deg);
 }
 
 
-/* LITTLE PHOTO OVER THE CENTER */
-
+/* UPPER CENTER - yellow shirt + cat */
 .photo9 {
-    width: 125px;
-    height: 145px;
-
+    width: 135px;
+    height: 150px;
     left: 125px;
-    top: 85px;
-
+    top: 105px;
     z-index: 9;
 
-    --rotation: 0deg;
+    transform: rotate(0deg);
 }
 
 
-/* BOTTOM CENTER PHOTO */
+/* BIG CENTER - main photo */
+.main-photo {
+    width: 205px;
+    height: 275px;
+    left: 82px;
+    top: 220px;
+    z-index: 7;
 
-.photo10 {
+    transform: rotate(0deg);
+}
+
+
+/* RIGHT MIDDLE - sleeping */
+.photo4 {
+    width: 150px;
+    height: 235px;
+    right: 0;
+    top: 220px;
+    z-index: 5;
+
+    transform: rotate(0deg);
+}
+
+
+/* LOWER LEFT - hoodie/dog */
+.photo5 {
     width: 145px;
-    height: 155px;
+    height: 190px;
+    left: 0;
+    top: 390px;
+    z-index: 8;
 
-    left: 108px;
-    bottom: 15px;
+    transform: rotate(0deg);
+}
 
+
+/* BOTTOM LEFT - blue top + cat */
+.photo7 {
+    width: 175px;
+    height: 160px;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+
+    transform: rotate(0deg);
+}
+
+
+/* BOTTOM CENTER - biceps */
+.photo10 {
+    width: 150px;
+    height: 175px;
+    left: 105px;
+    bottom: 0;
     z-index: 10;
 
-    --rotation: 0deg;
+    transform: rotate(0deg);
+}
+
+
+/* BOTTOM RIGHT - cheese */
+.photo8 {
+    width: 175px;
+    height: 190px;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+
+    transform: rotate(0deg);
+}
+
+
+/* =========================
+   NO EXTRA ROTATION
+========================= */
+
+.page-content.open .photo {
+    opacity: 1;
+
+    transform: rotate(0deg) scale(1);
 }
 /* =========================
    OPENING ANIMATION

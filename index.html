@@ -211,7 +211,6 @@ h1 {
     pointer-events: none;
 }
 
-
 /* =========================
    PHOTO COLLAGE
 ========================= */
@@ -220,175 +219,238 @@ h1 {
     position: relative;
 
     width: 360px;
-    height: 530px;
+    height: 610px;
 
-    margin: 10px auto;
+    margin: 20px auto;
+
+    overflow: hidden;
+
+    border-radius: 22px;
 
     opacity: 0;
-
-    transform: scale(0.7);
+    transform: scale(0.72);
 
     pointer-events: none;
 
+    background: #eee4d1;
+
+    box-shadow:
+        0 8px 25px rgba(80, 60, 50, 0.15);
+
     transition:
         opacity 0.5s ease,
-        transform 0.8s cubic-bezier(.2,.8,.2,1);
+        transform 0.9s cubic-bezier(.2,.8,.2,1);
 }
 
 
-/* Every photo begins tiny */
+/* =========================
+   PHOTOS
+========================= */
 
 .photo {
     position: absolute;
 
     object-fit: cover;
 
-    background: white;
-
-    padding: 9px;
+    padding: 0;
 
     box-sizing: border-box;
 
+    border: none;
+
     box-shadow:
-        0 5px 14px rgba(80, 60, 50, 0.16);
+        0 5px 13px rgba(60, 45, 40, 0.18);
 
     filter:
-        sepia(12%)
-        saturate(82%)
-        contrast(94%)
+        sepia(10%)
+        saturate(85%)
+        contrast(95%)
         brightness(103%);
-
-    transform:
-        translate(0, 0)
-        rotate(0deg)
-        scale(0.35);
 
     opacity: 0;
 
     transition:
         transform 1s cubic-bezier(.2,.8,.2,1),
-        opacity 0.5s ease;
+        opacity 0.55s ease;
 }
 
 
 /* =========================
-   FINAL PHOTO POSITIONS
+   COLLAGE POSITIONS
 ========================= */
 
-.main-photo {
-    width: 205px;
-    height: 270px;
 
-    left: 78px;
-    top: 130px;
-
-    z-index: 5;
-}
+/* TOP LEFT */
 
 .photo1 {
-    width: 130px;
-    height: 160px;
+    width: 180px;
+    height: 145px;
 
-    left: 0;
-    top: 10px;
+    left: -4px;
+    top: 0;
 
-    z-index: 6;
+    z-index: 3;
+
+    --rotation: -1deg;
 }
+
+
+/* TOP RIGHT */
 
 .photo2 {
-    width: 130px;
-    height: 160px;
+    width: 178px;
+    height: 235px;
 
-    right: 0;
-    top: 5px;
+    right: -4px;
+    top: -5px;
 
-    z-index: 6;
+    z-index: 2;
+
+    --rotation: 1deg;
 }
+
+
+/* MAIN CENTER PHOTO */
+
+.main-photo {
+    width: 190px;
+    height: 265px;
+
+    left: 88px;
+    top: 190px;
+
+    z-index: 7;
+
+    --rotation: -2deg;
+}
+
+
+/* LEFT-MIDDLE */
 
 .photo3 {
-    width: 130px;
-    height: 160px;
+    width: 160px;
+    height: 215px;
 
-    left: 0;
-    bottom: 10px;
+    left: -8px;
+    top: 125px;
 
-    z-index: 6;
+    z-index: 4;
+
+    --rotation: -1deg;
 }
+
+
+/* RIGHT-MIDDLE */
 
 .photo4 {
-    width: 130px;
-    height: 160px;
+    width: 155px;
+    height: 225px;
 
-    right: 0;
-    bottom: 5px;
+    right: -6px;
+    top: 225px;
 
-    z-index: 6;
+    z-index: 5;
+
+    --rotation: 1deg;
 }
+
+
+/* LITTLE CENTER-LEFT PHOTO */
 
 .photo5 {
-    width: 130px;
-    height: 160px;
+    width: 145px;
+    height: 175px;
 
     left: 5px;
-    top: 180px;
+    top: 340px;
 
-    z-index: 7;
+    z-index: 8;
+
+    --rotation: -2deg;
 }
+
+
+/* CENTER-RIGHT PHOTO */
 
 .photo6 {
-    width: 130px;
-    height: 160px;
+    width: 135px;
+    height: 165px;
 
-    right: 5px;
-    top: 180px;
+    right: 4px;
+    top: 145px;
 
-    z-index: 7;
+    z-index: 6;
+
+    --rotation: 2deg;
 }
+
+
+/* LOWER LEFT */
 
 .photo7 {
-    width: 125px;
-    height: 155px;
+    width: 175px;
+    height: 205px;
 
-    left: 15px;
-    top: 75px;
+    left: -5px;
+    bottom: -5px;
 
-    z-index: 8;
+    z-index: 3;
+
+    --rotation: -1deg;
 }
+
+
+/* LOWER RIGHT */
 
 .photo8 {
-    width: 125px;
-    height: 155px;
+    width: 180px;
+    height: 195px;
 
-    right: 15px;
-    top: 75px;
+    right: -5px;
+    bottom: 0;
 
-    z-index: 8;
+    z-index: 4;
+
+    --rotation: 1deg;
 }
+
+
+/* LITTLE PHOTO OVER THE CENTER */
 
 .photo9 {
     width: 125px;
-    height: 155px;
+    height: 145px;
 
-    left: 15px;
-    bottom: 75px;
+    left: 125px;
+    top: 85px;
 
-    z-index: 8;
+    z-index: 9;
+
+    --rotation: 2deg;
 }
 
+
+/* BOTTOM CENTER PHOTO */
+
 .photo10 {
-    width: 125px;
+    width: 145px;
     height: 155px;
 
-    right: 15px;
-    bottom: 75px;
+    left: 108px;
+    bottom: 15px;
 
-    z-index: 8;
+    z-index: 10;
+
+    --rotation: -2deg;
 }
 
 
 /* =========================
-   OPEN ANIMATION
+   OPENING ANIMATION
 ========================= */
+
+
+/* Box opens */
 
 .page-content.open .box-lid {
     transform:
@@ -396,11 +458,15 @@ h1 {
         translate(-15px, -45px);
 }
 
+
+/* Box disappears */
+
 .page-content.open .memory-box {
     animation: boxDisappear 0.8s ease forwards;
 
     pointer-events: none;
 }
+
 
 @keyframes boxDisappear {
 
@@ -421,6 +487,9 @@ h1 {
     }
 }
 
+
+/* Collage appears */
+
 .page-content.open .photo-collage {
     opacity: 1;
 
@@ -430,7 +499,9 @@ h1 {
 }
 
 
-/* Photos bloom outward */
+/* =========================
+   PHOTO BLOOM
+========================= */
 
 .page-content.open .photo {
     opacity: 1;
@@ -442,34 +513,76 @@ h1 {
 }
 
 
-/* Rotations */
+/* =========================
+   STAGGERED APPEARANCE
+========================= */
 
-.photo1 { --rotation: -8deg; }
-.photo2 { --rotation: 7deg; }
-.photo3 { --rotation: 6deg; }
-.photo4 { --rotation: -7deg; }
-.photo5 { --rotation: -5deg; }
-.photo6 { --rotation: 8deg; }
-.photo7 { --rotation: 5deg; }
-.photo8 { --rotation: -6deg; }
-.photo9 { --rotation: -7deg; }
-.photo10 { --rotation: 6deg; }
+.photo1 {
+    transition-delay: 0.10s;
+}
+
+.photo2 {
+    transition-delay: 0.17s;
+}
+
+.main-photo {
+    transition-delay: 0.24s;
+}
+
+.photo3 {
+    transition-delay: 0.31s;
+}
+
+.photo4 {
+    transition-delay: 0.38s;
+}
+
+.photo5 {
+    transition-delay: 0.45s;
+}
+
+.photo6 {
+    transition-delay: 0.52s;
+}
+
+.photo7 {
+    transition-delay: 0.59s;
+}
+
+.photo8 {
+    transition-delay: 0.66s;
+}
+
+.photo9 {
+    transition-delay: 0.73s;
+}
+
+.photo10 {
+    transition-delay: 0.80s;
+}
 
 
-/* Stagger */
+/* =========================
+   MOBILE
+========================= */
 
-.photo1 { transition-delay: 0.15s; }
-.photo2 { transition-delay: 0.22s; }
-.photo3 { transition-delay: 0.29s; }
-.photo4 { transition-delay: 0.36s; }
-.photo5 { transition-delay: 0.43s; }
-.photo6 { transition-delay: 0.50s; }
-.photo7 { transition-delay: 0.57s; }
-.photo8 { transition-delay: 0.64s; }
-.photo9 { transition-delay: 0.71s; }
-.photo10 { transition-delay: 0.78s; }
+@media (max-width: 500px) {
 
+    .photo-collage {
+        width: 360px;
+        height: 610px;
 
+        transform: scale(0.88);
+        transform-origin: top center;
+
+        margin-bottom: -55px;
+    }
+
+    .page-content.open .photo-collage {
+        transform: scale(0.88);
+    }
+
+}
 /* =========================
    TEXT + BUTTON
 ========================= */
